@@ -9,6 +9,7 @@ import { nodePolyfills } from "vite-plugin-node-polyfills";
 
 export default defineConfig({
   tanstackStart: {
+    server: { preset: "vercel" },
     router: {
       routeFileIgnorePattern: "api\\.privy-bridge",
     },
