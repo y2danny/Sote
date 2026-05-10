@@ -14,17 +14,6 @@ export default defineConfig({
     },
   },
   vite: {
-    plugins: [
-      // Polyfill Buffer and process for Solana/bs58 packages.
-      // Exclude stream — stream-browserify/web subpath doesn't exist and
-      // @tanstack/router-core's SSR stream usage should stay server-side.
-      nodePolyfills({ exclude: ["stream"] }),
-    ],
-    resolve: {
-      alias: {
-        // Prevent vite from trying to bundle the non-existent stream-browserify/web
-        "stream-browserify/web": "stream-browserify",
-      },
-    },
+    plugins: [nodePolyfills()],
   },
 });
