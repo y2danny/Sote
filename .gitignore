@@ -1,6 +1,9 @@
 # Claude Code local settings
 .claude/
 
+# npm lockfile — project uses bun; let Vercel resolve fresh
+package-lock.json
+
 # Environment variables — never commit secrets
 .env
 .env.*
