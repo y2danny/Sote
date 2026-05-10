@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <title>Soté Open Graph image</title>
+  <rect x="0" y="0" width="1200" height="630" fill="#0E1A14"/>
+
+  <g transform="translate(80, 80)">
+    <rect x="0" y="0" width="56" height="56" rx="13" fill="#E8552A"/>
+    <text x="28" y="40"
+          font-family="Inter, system-ui, -apple-system, 'Segoe UI', sans-serif"
+          font-weight="600"
+          font-size="34"
+          letter-spacing="-1.0"
+          text-anchor="middle"
+          fill="#FAF7F0">S</text>
+    <text x="78" y="40"
+          font-family="Inter, system-ui, -apple-system, 'Segoe UI', sans-serif"
+          font-weight="600"
+          font-size="34"
+          letter-spacing="-1.0"
+          fill="#FAF7F0">Sot<tspan fill="#E8552A">é</tspan></text>
+  </g>
+
+  <text x="80" y="320"
+        font-family="Inter, system-ui, -apple-system, 'Segoe UI', sans-serif"
+        font-weight="600"
+        font-size="84"
+        letter-spacing="-2.5"
+        fill="#FAF7F0">Pay vendors</text>
+  <text x="80" y="420"
+        font-family="Inter, system-ui, -apple-system, 'Segoe UI', sans-serif"
+        font-weight="600"
+        font-size="84"
+        letter-spacing="-2.5"
+        fill="#FAF7F0">at the speed of</text>
+  <text x="80" y="520"
+        font-family="Inter, system-ui, -apple-system, 'Segoe UI', sans-serif"
+        font-weight="600"
+        font-size="84"
+        letter-spacing="-2.5"
+        fill="#E8552A">Solana.</text>
+
+  <text x="80" y="580"
+        font-family="Inter, system-ui, -apple-system, 'Segoe UI', sans-serif"
+        font-weight="500"
+        font-size="22"
+        letter-spacing="0"
+        fill="#9FB89F">Cross-border payments for African importers, settled in PUSD.</text>
+</svg>

@@ -1,0 +1,196 @@
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+/* Soté brand tokens — see BRAND.md */
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 8px);
+
+  --font-sans: "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-display: "Inter", "Inter Display", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, "SF Mono", Consolas, monospace;
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-ring-offset-background: var(--background);
+
+  /* Brand surfaces */
+  --color-ink: var(--ink);
+  --color-forest: var(--forest);
+  --color-bone: var(--bone);
+  --color-paper: var(--paper);
+
+  /* Brand accent */
+  --color-kola: var(--kola);
+  --color-kola-50: var(--kola-50);
+  --color-kola-200: var(--kola-200);
+  --color-kola-500: var(--kola-500);
+  --color-kola-800: var(--kola-800);
+
+  /* Semantic */
+  --color-success: var(--success);
+  --color-pending: var(--pending);
+  --color-failure: var(--failure);
+  --color-sage: var(--sage);
+
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+:root {
+  --radius: 0.625rem;
+
+  /* Brand */
+  --ink: oklch(0.198 0.018 158);
+  --forest: oklch(0.302 0.034 158);
+  --bone: oklch(0.971 0.012 92);
+  --paper: oklch(1 0 0);
+  --kola: oklch(0.673 0.166 41);
+  --kola-50: oklch(0.948 0.038 51);
+  --kola-200: oklch(0.797 0.114 41);
+  --kola-500: oklch(0.673 0.166 41);
+  --kola-800: oklch(0.392 0.095 41);
+
+  --success: oklch(0.477 0.094 158);
+  --pending: oklch(0.563 0.112 71);
+  --failure: oklch(0.508 0.151 30);
+  --sage: oklch(0.747 0.039 145);
+
+  /* Light theme — Bone surface */
+  --background: var(--bone);
+  --foreground: var(--ink);
+  --card: var(--paper);
+  --card-foreground: var(--ink);
+  --popover: var(--paper);
+  --popover-foreground: var(--ink);
+  --primary: var(--ink);
+  --primary-foreground: var(--bone);
+  --secondary: oklch(0.945 0.011 92);
+  --secondary-foreground: var(--ink);
+  --muted: oklch(0.945 0.011 92);
+  --muted-foreground: oklch(0.45 0.014 158);
+  --accent: var(--kola-50);
+  --accent-foreground: var(--kola-800);
+  --destructive: var(--failure);
+  --destructive-foreground: var(--paper);
+  --border: oklch(0.91 0.012 92);
+  --input: oklch(0.91 0.012 92);
+  --ring: var(--ink);
+
+  --chart-1: var(--kola-500);
+  --chart-2: var(--forest);
+  --chart-3: var(--pending);
+  --chart-4: var(--success);
+  --chart-5: var(--sage);
+
+  --sidebar: var(--paper);
+  --sidebar-foreground: var(--ink);
+  --sidebar-primary: var(--ink);
+  --sidebar-primary-foreground: var(--bone);
+  --sidebar-accent: oklch(0.945 0.011 92);
+  --sidebar-accent-foreground: var(--ink);
+  --sidebar-border: oklch(0.91 0.012 92);
+  --sidebar-ring: var(--ink);
+}
+
+.dark {
+  --background: var(--ink);
+  --foreground: var(--bone);
+  --card: var(--forest);
+  --card-foreground: var(--bone);
+  --popover: var(--forest);
+  --popover-foreground: var(--bone);
+  --primary: var(--kola);
+  --primary-foreground: var(--ink);
+  --secondary: oklch(0.27 0.024 158);
+  --secondary-foreground: var(--bone);
+  --muted: oklch(0.27 0.024 158);
+  --muted-foreground: var(--sage);
+  --accent: oklch(0.32 0.034 158);
+  --accent-foreground: var(--bone);
+  --destructive: var(--failure);
+  --destructive-foreground: var(--bone);
+  --border: oklch(0.32 0.024 158 / 80%);
+  --input: oklch(0.32 0.024 158);
+  --ring: var(--kola);
+
+  --sidebar: var(--ink);
+  --sidebar-foreground: var(--bone);
+  --sidebar-primary: var(--kola);
+  --sidebar-primary-foreground: var(--ink);
+  --sidebar-accent: oklch(0.27 0.024 158);
+  --sidebar-accent-foreground: var(--bone);
+  --sidebar-border: oklch(0.32 0.024 158);
+  --sidebar-ring: var(--kola);
+}
+
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+
+  html, body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    font-feature-settings: "ss01", "cv11";
+  }
+
+  /* Tabular numerals for money */
+  .tabular { font-variant-numeric: tabular-nums; }
+  .mono { font-family: var(--font-mono); }
+
+  h1, h2, h3, h4 { font-family: var(--font-display); letter-spacing: -0.02em; font-weight: 600; }
+  h1 { letter-spacing: -0.03em; }
+}
+
+@layer utilities {
+  .bg-grid {
+    background-image:
+      linear-gradient(to right, oklch(1 0 0 / 4%) 1px, transparent 1px),
+      linear-gradient(to bottom, oklch(1 0 0 / 4%) 1px, transparent 1px);
+    background-size: 56px 56px;
+  }
+  .bg-grid-light {
+    background-image:
+      linear-gradient(to right, oklch(0 0 0 / 4%) 1px, transparent 1px),
+      linear-gradient(to bottom, oklch(0 0 0 / 4%) 1px, transparent 1px);
+    background-size: 56px 56px;
+  }
+}

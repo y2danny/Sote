@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <title>Soté square mark</title>
+  <rect x="0" y="0" width="64" height="64" rx="14" fill="#E8552A"/>
+  <text x="32" y="46"
+        font-family="Inter, 'Inter Display', system-ui, -apple-system, 'Segoe UI', sans-serif"
+        font-weight="600"
+        font-size="40"
+        letter-spacing="-1.2"
+        text-anchor="middle"
+        fill="#FAF7F0">S</text>
+</svg>
