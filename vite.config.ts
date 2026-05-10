@@ -14,6 +14,27 @@ export default defineConfig({
     },
   },
   vite: {
-    plugins: [nodePolyfills()],
+    plugins: [
+      // Only polyfill what browser code actually needs (Buffer, process).
+      // Excluding fs/stream avoids the node-stdlib-browser/empty.js subpath bug.
+      nodePolyfills({ include: ["buffer", "process"] }),
+    ],
+    resolve: {
+      // Force Vite to prefer browser exports so @solana/* packages serve their
+      // browser builds instead of the .node.mjs variants.
+      conditions: ["browser", "module", "import", "default"],
+    },
+    optimizeDeps: {
+      esbuildOptions: {
+        conditions: ["browser", "module", "import", "default"],
+      },
+    },
+    build: {
+      rollupOptions: {
+        // Externalize any remaining node: built-ins so Rollup doesn't try to
+        // bundle them (the browser builds of Solana packages don't import them).
+        external: (id) => id.startsWith("node:"),
+      },
+    },
   },
 });
